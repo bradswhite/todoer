@@ -39,7 +39,7 @@ export function App() {
 } catch (err) {
   console.log('errr', err)
 }*/
-try {
+  /*try {
   /*axios.get('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzMjkxMjc5fQ.W3JiTjeyfNKmULQmAfwida6FzH1S_cNUH-2OwydZD_8',
     withCredentials: true
@@ -49,7 +49,7 @@ try {
     })
     .catch(err => {
       console.log(err)
-    })*/
+    })
   (async () => {
     const res = await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
       mode: 'cors',
@@ -62,7 +62,16 @@ try {
   })();
 } catch (err) {
   console.log('errr', err)
-}
+}*/
+(async () => {
+  const updated = await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYxODQ4fQ.COMg8tugUK-v-Ws3k8caA8JIgL1rJrRR4PBDqpq5V9Y'
+    }
+  }).then(res => res.json());
+  console.log(await updated);
+})();
 
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
