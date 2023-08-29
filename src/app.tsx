@@ -52,13 +52,13 @@ try {
     })*/
   (async () => {
     const res = await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
-    mode: 'cors',
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzMjI3NTc5fQ._A6C3-OM26AyX2kheenwlyyEFaYsf17BZEfHRWOQh94'
-    }
-  });
-  console.log(await res.json());
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYxODQ4fQ.COMg8tugUK-v-Ws3k8caA8JIgL1rJrRR4PBDqpq5V9Y'
+      }
+    });
+    console.log(await res.json());
   })();
 } catch (err) {
   console.log('errr', err)
