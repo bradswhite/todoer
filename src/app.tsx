@@ -39,7 +39,26 @@ export function App() {
 } catch (err) {
   console.log('errr', err)
 }*/
-  const ping = async () => {
+  const [data, setData] = useState<any>('');
+
+  useEffect(() => {
+    (
+      async () => {
+        const response = await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNTU1ODg2fQ.f9QVzcauxj5UdfXdRfLQMdyak0NXi4RKDbbyMZZSO5w',
+          },
+          credentials: 'include',
+        });
+
+        const content = await response.json();
+
+        setData(content);
+      }
+    )();
+  });
+  /*const ping = async () => {
     axios.get('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDY1NzI3fQ.K7gY5r588TXm0sZeuFGl2l6CMyyPKSdyx0F_KUjad9s',
       withCredentials: true,
@@ -51,7 +70,7 @@ export function App() {
       .catch(err => {
         console.log(err)
       })
-  };
+  };*/
 
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
@@ -62,6 +81,7 @@ export function App() {
       )*/}
 
       <h1 className='text-5xl text-red-800'>Howdy!</h1>
+      <div>{data}</div>
       <button className='bg-red-600 rounded-2xl m-10' onClick={ping}>Ping</button>
     </main>
   )
