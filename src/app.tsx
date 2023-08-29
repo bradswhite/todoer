@@ -82,7 +82,7 @@ export function App() {
 
       <h1 className='text-5xl text-red-800'>Howdy!</h1>
       <div>{data}</div>
-      <button className='bg-red-600 rounded-2xl m-10' onClick={ping}>Ping</button>
+  {/*<button className='bg-red-600 rounded-2xl m-10' onClick={ping}>Ping</button>*/}
     </main>
   )
 }
