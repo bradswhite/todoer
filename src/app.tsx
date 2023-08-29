@@ -1,6 +1,6 @@
 //import { useState, useEffect } from 'preact/hooks'
 
-//import axios from 'axios';
+import axios from 'axios';
 
 //import { /*isAuth,*/ testFn } from '../serviceFns/authFns';
 /*import Auth from './Auth';
@@ -39,41 +39,17 @@ export function App() {
 } catch (err) {
   console.log('errr', err)
 }*/
-  /*try {
-  /*axios.get('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
-    Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzMjkxMjc5fQ.W3JiTjeyfNKmULQmAfwida6FzH1S_cNUH-2OwydZD_8',
-    withCredentials: true
-  })
-    .then(res => {
-      console.log(res)
-    })
-    .catch(err => {
-      console.log(err)
-    })
-  (async () => {
-    const res = await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
-      mode: 'cors',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYxODQ4fQ.COMg8tugUK-v-Ws3k8caA8JIgL1rJrRR4PBDqpq5V9Y'
-      }
-    });
-    console.log(await res.json());
-  })();
-} catch (err) {
-  console.log('errr', err)
-}*/
   const ping = async () => {
-    await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
-      //mode: 'no-cors',
-      headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDY1NzI3fQ.K7gY5r588TXm0sZeuFGl2l6CMyyPKSdyx0F_KUjad9s'
-      }
+    axios.get('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
+      Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDY1NzI3fQ.K7gY5r588TXm0sZeuFGl2l6CMyyPKSdyx0F_KUjad9s',
+      withCredentials: true
     })
-      .then(res => res.json())
-      .catch(err => console.log(err))
-    //.then(res => res.json());
-    //console.log(await updated);
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
   };
 
   return (
