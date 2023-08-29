@@ -1,6 +1,6 @@
-//import { useState, useEffect } from 'preact/hooks'
+import { useState, useEffect } from 'preact/hooks'
 
-import axios from 'axios';
+//import axios from 'axios';
 
 //import { /*isAuth,*/ testFn } from '../serviceFns/authFns';
 /*import Auth from './Auth';
