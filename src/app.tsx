@@ -69,8 +69,8 @@ export function App() {
     headers: {
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYxODQ4fQ.COMg8tugUK-v-Ws3k8caA8JIgL1rJrRR4PBDqpq5V9Y'
     }
-  }).then(res => res.json());
-  console.log(await updated);
+  })//.then(res => res.json());
+  //console.log(await updated);
 })();
 
   return (
