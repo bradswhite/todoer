@@ -65,12 +65,12 @@ export function App() {
 }*/
 (async () => {
   await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
-    mode: 'no-cors',
+    mode: 'cors',
     headers: {
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYzMjIxfQ.1poS8tAwQkWRsMuyg98M-vIJuFMyatfdddlCZb-67zc'
     }
   })
-    .then(res => alert(JSON.stringify(res.json())))
+    .then(res => console.log(JSON.stringify(res.json())))
     .catch(err => console.log(err))
   //.then(res => res.json());
   //console.log(await updated);
