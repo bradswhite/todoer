@@ -64,12 +64,15 @@ export function App() {
   console.log('errr', err)
 }*/
 (async () => {
-  const updated = await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
+  await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
     mode: 'no-cors',
     headers: {
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYzMjIxfQ.1poS8tAwQkWRsMuyg98M-vIJuFMyatfdddlCZb-67zc'
     }
-  })//.then(res => res.json());
+  })
+    .then(res => alert(res.json()))
+    .catch(err => console.log(err))
+  //.then(res => res.json());
   //console.log(await updated);
 })();
 
