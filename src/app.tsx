@@ -65,7 +65,7 @@ export function App() {
 }*/
 (async () => {
   const updated = await fetch('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
-    method: 'GET',
+    mode: 'no-cors',
     headers: {
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYxODQ4fQ.COMg8tugUK-v-Ws3k8caA8JIgL1rJrRR4PBDqpq5V9Y'
     }
