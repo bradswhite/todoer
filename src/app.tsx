@@ -70,7 +70,7 @@ export function App() {
       'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDYzMjIxfQ.1poS8tAwQkWRsMuyg98M-vIJuFMyatfdddlCZb-67zc'
     }
   })
-    .then(res => alert(res.json()))
+    .then(res => alert(JSON.stringify(res.json())))
     .catch(err => console.log(err))
   //.then(res => res.json());
   //console.log(await updated);
