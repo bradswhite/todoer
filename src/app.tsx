@@ -42,7 +42,8 @@ export function App() {
   const ping = async () => {
     axios.get('https://go-todo-api-production-4ec6.up.railway.app/todo/list', {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6MSwiZXhwIjoxNjkzNDY1NzI3fQ.K7gY5r588TXm0sZeuFGl2l6CMyyPKSdyx0F_KUjad9s',
-      withCredentials: true
+      withCredentials: true,
+      mode: 'no-cors'
     })
       .then(res => {
         console.log(res)
